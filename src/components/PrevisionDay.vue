@@ -45,29 +45,29 @@ export default {
 
 <style>
 .jour-prevision-bloc {
-    grid-area: 4 / 1 / 5 / -1;
+  grid-area: 4 / 1 / 5 / -1;
 }
 
 .jour-prevision-bloc {
-    display: grid;
-    grid-template: 100px / repeat(7, 1fr);
+  display: grid;
+  grid-template: 100px / repeat(7, 1fr);
 }
 
-.bloc-h, .bloc-j {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-top: 1px solid #f1f1f1;
-    font-size: 21px;
+.bloc-h,
+.bloc-j {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-top: 1px solid #f1f1f1;
+  font-size: 21px;
 }
 
 .bloc-j:not(:last-child) {
-    border-right: 1px solid #f1f1f1;
+  border-right: 1px solid #f1f1f1;
 }
 
- .bloc-j p {
-    margin: 5px;
+.bloc-j p {
+  margin: 5px;
 }
-
 </style>

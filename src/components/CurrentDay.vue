@@ -21,8 +21,7 @@ export default {
   name: "CurrentDay",
   props: {},
   data() {
-    return {
-    };
+    return {};
   },
 
   mounted() {},
@@ -31,35 +30,33 @@ export default {
 
 <style>
 .bloc-logo-info {
-    display: flex;
-    flex-direction : row;
-    justify-content: center;
-    align-items: center;
-    margin: 0.1%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0.1%;
 }
 .bloc-logo {
-    width: 50%;
+  width: 50%;
 }
 .bloc-logo img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 .bloc-info {
-    width: 50%;
+  width: 50%;
 }
 .bloc-info .temps {
-    font-size: 40px;
+  font-size: 40px;
 }
 .bloc-info .temps::first-letter {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 .bloc-info .temperature {
-    font-size: 60px;
+  font-size: 60px;
 }
 .bloc-info .localisation {
-    font-size: 40px;
-    word-wrap: break-word;
+  font-size: 40px;
+  word-wrap: break-word;
 }
-
-
 </style>

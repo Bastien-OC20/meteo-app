@@ -8,13 +8,10 @@
     </div>
     <h1>Application météo</h1>
 
-      <CurrentDay />
-      <PrevisionDay />
-      <CurrentHours />
- <div>
-
-
- </div>
+    <CurrentDay />
+    <PrevisionDay />
+    <CurrentHours />
+    <div></div>
   </section>
 </template>
 
@@ -23,17 +20,15 @@ import CurrentDay from "./components/CurrentDay.vue";
 import PrevisionDay from "./components/PrevisionDay.vue";
 import CurrentHours from "./components/CurrentHours.vue";
 
-
 export default {
   name: "App",
   components: {
     CurrentDay,
     PrevisionDay,
-    CurrentHours
-},
+    CurrentHours,
+  },
   data() {
-    return {
-    };
+    return {};
   },
 
   mounted() {
@@ -121,9 +116,11 @@ export default {
 
           // Icone dynamique
           if (heureActuelle >= 6 && heureActuelle < 21) {
-            imgIcone.src ="../assets/ressources/jour/${resultatsAPI.current.weather.icon}.svg";
+            imgIcone.src =
+              "../assets/ressources/jour/${resultatsAPI.current.weather.icon}.svg";
           } else {
-            imgIcone.src ="../assets/ressources/nuit/${resultatsAPI.current.weather.icon}.svg";
+            imgIcone.src =
+              "../assets/ressources/nuit/${resultatsAPI.current.weather.icon}.svg";
           }
 
           chargementContainer.classList.add("disparition");
@@ -156,8 +153,6 @@ export default {
 </script>
 
 <style>
-
-
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -167,66 +162,68 @@ export default {
   margin-top: 60px;
 }
 
-*, ::before, ::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-*, ::before, ::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #f1f1f1;
-    background: linear-gradient(45deg, #868686, rgb(22,28,29));
-    height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f1f1f1;
+  background: linear-gradient(45deg, #868686, rgb(22, 28, 29));
+  height: 100vh;
 }
 
 .container {
-    display : flex;
-    flex-direction : column;
-    width: 60%;
-    margin: auto;
-    background: linear-gradient(45deg, #1068b6, #ecea60);
-    border: 3px solid #f1f1f1;
-    border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: auto;
+  background: linear-gradient(45deg, #1068b6, #ecea60);
+  border: 3px solid #f1f1f1;
+  border-radius: 30px;
 }
 
 h1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1.5px solid #f1f1f1;
-    padding: 3%;
-    margin-bottom: 2%;
-    font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1.5px solid #f1f1f1;
+  padding: 3%;
+  margin-bottom: 2%;
+  font-size: 2em;
 }
-
-
 
 /* Animation chargement */
 
 .overlay-icone-chargement {
-    position: absolute;
-    left: 15%;
-    top: 5%;
-    width: 70%;
-    height: 100%;
-    background: linear-gradient(45deg, #868686, #161c1d);
-    transition: opacity 1.1s ease-out;
-    z-index: 1000;
+  position: absolute;
+  left: 15%;
+  top: 5%;
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(45deg, #868686, #161c1d);
+  transition: opacity 1.1s ease-out;
+  z-index: 1000;
 }
 .overlay-icone-chargement img {
-    width: 150px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  width: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .disparition {
-    opacity: 0;
+  opacity: 0;
 }
 </style>
